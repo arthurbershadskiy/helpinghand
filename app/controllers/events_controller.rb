@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-	
+
 	def new
 		@event = Event.new
 	end
@@ -39,6 +39,6 @@ class EventsController < ApplicationController
 	end
 	private
 	def event_params
-    	params.require(:event).permit(:name, :address, :longitude, :latitude)
+    	params.require(:event).permit(:name, :address, :longitude, :latitude, :user_id)
   	end
 end
