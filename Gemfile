@@ -24,6 +24,7 @@ gem 'geocoder'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'gmaps4rails' 
+gem 'cancancan'
 
 group :development do
 	gem 'better_errors'
