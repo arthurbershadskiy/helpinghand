@@ -1,0 +1,8 @@
+As an organizer, I want to add events (CRUD).
+As an organizer, I want to share events (via social media).
+
+
+As a volunteer, I want to sign up for events.
+As a volunteer, I want to share events.
+
+As a user, I want to see events near a certain location.
