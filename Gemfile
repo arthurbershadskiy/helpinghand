@@ -22,6 +22,7 @@ gem "therubyracer"
 gem "less-rails"
 gem 'geocoder'
 gem 'twitter-bootstrap-rails'
+gem 'devise'
 
 group :development do
 	gem 'better_errors'
