@@ -18,9 +18,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
-gem 'bootstrap-sass', '~> 3.1.1'
+gem "therubyracer"
+gem "less-rails"
 gem 'geocoder'
+gem 'twitter-bootstrap-rails'
+
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
