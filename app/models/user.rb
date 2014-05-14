@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   ROLES = %w[admin user banned]         
-  has_many :events
+  has_many :participations
+  has_many :events, through: :participations 
 end
