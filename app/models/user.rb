@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
   ROLES = %w[admin user banned]         
   has_many :participations
   has_many :events, through: :participations 
+  before_create :set_default_role
+  belongs_to :role
+
+
+ private
+  def set_default_role
+    self.role ||= Role.find_by_name('user')
+  end
 end
