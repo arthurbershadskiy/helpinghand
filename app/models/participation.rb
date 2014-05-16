@@ -1,4 +1,4 @@
 class Participation < ActiveRecord::Base
-	has_many :events
-	has_many :users
+	belongs_to :event
+	belongs_to :user
 end

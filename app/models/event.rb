@@ -3,5 +3,5 @@ class Event < ActiveRecord::Base
 	after_validation :geocode, if: :address_changed?
 	belongs_to :user
 	has_many :participations
-	has_many :volunteers, through: :participations
+	has_many :users, through: :participations
 end
