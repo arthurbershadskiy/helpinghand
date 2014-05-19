@@ -1,11 +1,9 @@
 <div id="multi_markers" style='width: 80%; height: 800px;'></div>
 
-
-<!---Fix this later
 <% content_for :sidebar do %>
   <%= render 'sidebar' %>
 <% end %>
-//-->
+
 
 <script type='text/javascript'>  
     var handler = Gmaps.build('Google');
@@ -15,3 +13,5 @@ handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
   handler.fitMapToBounds();
 });    
 </script>
+
+

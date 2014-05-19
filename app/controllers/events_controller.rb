@@ -37,10 +37,22 @@ class EventsController < ApplicationController
 			flash[:alert] = "Event not deleted"
 		end
 	end
+	def add_user
+		@event = Event.find(params[:event_id])
+		if @event.users.include? current_user
+			redirect_to @event
+			flash[:alert] = "You're already signed up for this event."
+		else
+		@event.users << current_user
+		redirect_to @event
+		flash[:notice] = "Hope to see you there."
+		end
+	end
 
 
 	private
 	def event_params
     	params.require(:event).permit(:name, :address, :longitude, :latitude, :user_id)
   	end
+
 end

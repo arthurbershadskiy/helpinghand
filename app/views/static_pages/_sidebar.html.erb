@@ -1,3 +1,6 @@
-  <h1>hello</h1>
-  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, eum soluta earum adipisci perspiciatis dolorum repellat. Nam, earum harum placeat totam consectetur quaerat possimus asperiores maiores perspiciatis nemo aperiam voluptatum.
-  </p>
+<h1>Find events nearby!</h1>
+<%= form_tag events_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Near", :name => nil %>
+<% end %>

@@ -1,7 +1,7 @@
 <%= content_for :title, @event.name %>
 <%- model_class = Event -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1><%= @event.name.titleize %> @ <%= @event.address %></h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -15,7 +15,7 @@
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               events_path, :class => 'btn'  %>
-  
+  <a href='/events/<%= @event.id %>/volunteer' class='btn btn-primary'>Sign up for this event</a>
   <% if @event.user == current_user %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_event_path(@event), :class => 'btn' %>    
@@ -26,3 +26,14 @@
               :class => 'btn btn-danger' %>
   <% end %>
 </div>
+
+
+
+<h1>People attending this event:</h1>
+<ul>
+<% @event.users.each do |volunteer| %>
+  <li><a href=''><%= volunteer.email %></a></li>
+<% end %>
+</ul>
+
+
