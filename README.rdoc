@@ -3,4 +3,4 @@
 A way to make philanthropy accessible. 
 
 
-helpinghand-101.herokuapp.com
+www.helpinghand-101.herokuapp.com
