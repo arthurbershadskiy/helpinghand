@@ -15,7 +15,7 @@
       <tr>
         <td><%= link_to event.name, event_path(event) %></td>
         <td><%= event.address %></td>
-        <td><%= event.date %></td>
+        <td><%= event.date.localtime.to_formatted_s(:long_ordinal) %></td>
       </tr>
     <% end %>
   </tbody>
