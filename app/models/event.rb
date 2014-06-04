@@ -4,5 +4,6 @@ class Event < ActiveRecord::Base
 	belongs_to :user
 	has_many :participations
 	has_many :users, through: :participations
-
+	reverse_geocoded_by :latitude, :longitude
+	after_validation :reverse_geocode
 end

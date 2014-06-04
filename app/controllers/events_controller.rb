@@ -4,7 +4,11 @@ class EventsController < ApplicationController
 		@event = Event.new
 	end
 	def index
-		@events = Event.all
+			if params[:search].present?
+			@events = Event.near(params[:search], 20)
+		else
+			@events = Event.all
+		end
 	end
 	def show
 		@event = Event.find(params[:id])
